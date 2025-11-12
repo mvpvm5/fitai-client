@@ -1,5 +1,5 @@
 import React from "react";
-import "./landing.css"; // якщо ти створила цей файл
+import "./landing.css"; 
 import { Link } from "react-router-dom";
 
 
@@ -13,7 +13,7 @@ const LandingPage = () => {
         <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-[#7D5FFF] to-[#00C6AE] grid place-items-center font-bold">
-              μ
+            F
             </div>
             <span className="font-semibold">MYFIT AI</span>
           </div>
@@ -45,7 +45,7 @@ const LandingPage = () => {
         </div>
       </header>
 
-      {/* HERO */}
+     
       <section className="relative overflow-hidden">
         <div
           className="pointer-events-none absolute -top-24 -right-24 h-[520px] w-[520px] rounded-full blur-3xl opacity-40"
@@ -192,7 +192,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* TRUSTED */}
+
       <section className="py-8 border-y border-white/5 bg-[#0b0b14]">
         <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-slate-400 text-sm">
@@ -207,7 +207,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* FEATURES */}
+
       <section id="features" className="py-16">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid md:grid-cols-3 gap-6">
@@ -305,7 +305,9 @@ const LandingPage = () => {
       <footer className="py-10 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
           <div className="flex items-center gap-2">
-            <div className="h-6 w-6 rounded-md bg-gradient-to-br from-[#7D5FFF] to-[#00C6AE]"></div>
+            <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-[#7D5FFF] to-[#00C6AE] grid place-items-center font-bold">
+            F
+            </div>
             <span>MyFit.ai</span>
           </div>
           <div className="flex gap-6">
