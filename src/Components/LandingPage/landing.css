@@ -1,0 +1,28 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: #0F0F1A;
+  color: #E6EAF2;
+}
+
+.card {
+  background: rgba(21, 22, 39, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.glow-a {
+  box-shadow: 0 0 16px rgba(0, 198, 174, 0.35);
+}
+
+.glow-p {
+  box-shadow: 0 0 8px rgba(125, 95, 255, 0.35);
+}
+
+.ring-kpi {
+  border-radius: 9999px;
+  background: conic-gradient(var(--c, #00C6AE) var(--v, 60%), #1a1b2e var(--v, 60%));
+}

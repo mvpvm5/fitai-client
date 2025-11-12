@@ -1,0 +1,157 @@
+/* фон і контейнер */
+.page {
+  min-height: 100vh;
+  background: #0f0f1a;
+  color: #e2e8f0;
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.sectionWrap {
+  max-width: 64rem; /* ~max-w-5xl/6xl */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* заголовки */
+.sectionTitle {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* рядок із чіпсами */
+.row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* сетка як у tailwind grid sm:grid-cols-2 gap-4 */
+.grid2 {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #cbd5f5;
+}
+
+/* === Chip === */
+.chip {
+  background: rgba(15, 23, 42, 0.6); /* bg-slate-900/60 */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 9999px;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.chip:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.chipActive {
+  background: #14b8a6; /* bg-teal-400 */
+  border: 1px solid rgba(45, 212, 191, 0.55);
+  color: #0f172a;
+  box-shadow: 0 0 30px rgba(45, 212, 191, 0.35);
+}
+
+/* === range як у tailwind === */
+.range {
+  width: 100%;
+  accent-color: #14b8a6;
+}
+
+/* === Toggle === */
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 1.1rem;
+  padding: 0.7rem 1rem;
+}
+
+.toggleLabel {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* сам перемикач */
+.toggleOff,
+.toggleOn {
+  width: 3.1rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.toggleOff {
+  background: #334155; /* slate-600 */
+}
+
+.toggleOn {
+  background: #14b8a6;
+}
+
+.knob,
+.knobOn {
+  position: absolute;
+  top: 0.18rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  background: white;
+  border-radius: 9999px;
+  transition: 0.2s ease;
+}
+
+.knob {
+  left: 0.25rem;
+}
+
+.knobOn {
+  right: 0.25rem;
+}
+
+/* кнопка завершення */
+.primaryBtn {
+  width: 100%;
+  background: linear-gradient(90deg, #00c6ae, #7d5fff);
+  color: #020617;
+  border: none;
+  border-radius: 1.25rem;
+  padding: 0.9rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  box-shadow: 0 12px 35px rgba(0, 198, 174, 0.28);
+  transition: 0.15s ease;
+}
+
+.primaryBtn:hover {
+  filter: brightness(1.02);
+}
