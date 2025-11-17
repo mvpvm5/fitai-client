@@ -28,7 +28,7 @@
   font-weight: 500;
 }
 
-/* рядок із чіпсами */
+
 .row {
   display: flex;
   gap: 0.75rem;
@@ -98,7 +98,7 @@
   text-transform: capitalize;
 }
 
-/* сам перемикач */
+
 .toggleOff,
 .toggleOn {
   width: 3.1rem;
@@ -137,7 +137,7 @@
   right: 0.25rem;
 }
 
-/* кнопка завершення */
+
 .primaryBtn {
   width: 100%;
   background: linear-gradient(90deg, #00c6ae, #7d5fff);

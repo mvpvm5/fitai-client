@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // тут потім підключиш бекенд або навігацію
+    // тут бекенд
     console.log("signup form submitted");
   };
 

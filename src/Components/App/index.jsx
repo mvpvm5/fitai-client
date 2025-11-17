@@ -2,12 +2,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-// імпортуєш свої сторінки
-import LandingPage from "../LandingPage";     // твій лендінг (ти можеш назвати інакше)
-import Signup from "../Signup";               // ти вже імпортувала його в index.js
-import Dashboard from "../Dashboard";         // твій дашборд
-import Onboarding from "../Onboarding";       // якщо вже є онбординг
-// import Login from "../Login";                 // якщо є окремо
+
+import LandingPage from "../LandingPage";     
+import Signup from "../Signup";               
+import Dashboard from "../Dashboard";         
+import Onboarding from "../Onboarding";      
+// import Login from "../Login";                
 
 function App() {
   return (
