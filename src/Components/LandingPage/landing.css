@@ -7,6 +7,14 @@ body {
   color: #E6EAF2;
 }
 
+
+.fa-gradient-line {
+  height: 80px;
+  background: linear-gradient(90deg, rgba(14,165,233,0.1), rgba(99,102,241,0.15));
+  filter: blur(30px);
+}
+
+
 .card {
   background: rgba(21, 22, 39, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -25,4 +33,19 @@ body {
 .ring-kpi {
   border-radius: 9999px;
   background: conic-gradient(var(--c, #00C6AE) var(--v, 60%), #1a1b2e var(--v, 60%));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+  transition: all 0.25s ease;
 }

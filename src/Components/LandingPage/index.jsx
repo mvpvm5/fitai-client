@@ -150,7 +150,7 @@ const LandingPage = () => {
 
               <div className="grid md:grid-cols-2 gap-3 mt-3">
                 <div className="card p-4">
-                  <div className="text-sm font-semibold mb-1">AI Tip</div>
+                  <div className="text-sm font-semibold mb-1">Insight</div>
                   <p className="text-sm text-slate-400">
                     Stay consistent with your routine and remember that progress
                     takes time.
@@ -192,8 +192,9 @@ const LandingPage = () => {
         </div>
       </section>
 
+     < div class="fa-gradient-line"></div>
 
-      <section className="py-8 border-y border-white/5 bg-[#0b0b14]">
+      {/* <section className="py-8 border-y border-white/5 bg-[#0b0b14]">
         <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-slate-400 text-sm">
             Trusted by early users and student teams
@@ -205,7 +206,7 @@ const LandingPage = () => {
             <span className="text-xs uppercase tracking-wide">Everlearn</span>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       <section id="features" className="py-16">
@@ -239,6 +240,7 @@ const LandingPage = () => {
       {/* ABOUT */}
       <section id="about" className="py-16">
         <div className="mx-auto max-w-6xl px-4">
+          
           <h2 className="text-3xl font-bold mb-3">
             Everything in one AI dashboard
           </h2>
@@ -277,29 +279,33 @@ const LandingPage = () => {
       </section>
 
       {/* CTA */}
-      <section id="cta" className="pb-16 pt-2">
-        <div className="mx-auto max-w-5xl px-4">
-          <div className="card p-8 md:p-12 text-center">
-            <h3 className="text-3xl md:text-4xl font-extrabold">
-              Start today for a healthier tomorrow
-            </h3>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="#"
-                className="px-5 py-3 rounded-2xl bg-[#00C6AE] text-[#0F0F1A] font-medium glow-a hover:opacity-90"
-              >
-                Sign Up
-              </a>
-              <a
-                href="#"
-                className="px-5 py-3 rounded-2xl border border-white/10 bg-[#151627] hover:bg-white/5"
-              >
-                See Demo
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+<section id="cta" className="pb-20 pt-16 relative overflow-hidden">
+  <div className="absolute inset-0 bg-gradient-radial from-[#00C6AE]/15 to-transparent blur-3xl"></div>
+  <div className="mx-auto max-w-4xl px-4 relative z-10">
+    <div className="card p-10 md:p-14 text-center shadow-[0_0_40px_rgba(0,198,174,0.15)]">
+      <h3 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#7D5FFF] to-[#00C6AE] bg-clip-text text-transparent">
+        Start today for a healthier tomorrow
+      </h3>
+      <p className="text-slate-400 mt-4">
+        Join <span className="text-[#00C6AE] font-semibold">100+</span> early users shaping the future of smart fitness.
+      </p>
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <Link
+          to="/signup"
+          className="px-6 py-3 rounded-2xl bg-[#00C6AE] text-[#0F0F1A] font-medium hover:shadow-[0_0_25px_rgba(0,198,174,.35)] transition"
+        >
+          Sign Up
+        </Link>
+        <a
+          href="#preview"
+          className="px-6 py-3 rounded-2xl border border-white/10 bg-[#151627] hover:bg-white/5 transition"
+        >
+          See Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer className="py-10 border-t border-white/10">

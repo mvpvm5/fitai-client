@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
+import ReactApexChart from "react-apexcharts";
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -8,7 +9,7 @@ const Dashboard = () => {
   const water7d = [1650, 1900, 1200, 2100, 1800, 2000, 1750];
   const calories7d = [1420, 1550, 1670, 1500, 1820, 1600, 1490];
 
-    const chartOptions = {
+  const chartOptions = {
     chart: {
       type: "line",
       toolbar: { show: false },
@@ -19,7 +20,7 @@ const Dashboard = () => {
       width: 3,
       lineCap: "round",
     },
-    colors: ["#2dd4bf", "#818cf8"], // яскравий бірюзовий і насичений фіолетовий
+    colors: ["#2dd4bf", "#818cf8"],
     grid: {
       borderColor: "rgba(255,255,255,0.05)",
       strokeDashArray: 4,
@@ -71,11 +72,12 @@ const Dashboard = () => {
     },
   };
 
-
   const chartSeries = [
     { name: "Water (ml)", data: water7d },
     { name: "Calories (kcal)", data: calories7d },
   ];
+
+  const macros = { protein: 30, fats: 25, carbs: 45 };
 
   return (
     <div className="fa-shell">
@@ -184,6 +186,56 @@ const Dashboard = () => {
                 height={220}
               />
             </div>
+          </div>
+
+          {/* Nutrition breakdown */}
+          <div className="fa-card fa-nutrition p-5">
+            <div className="fa-card-head">
+              <h3>Nutrition breakdown</h3>
+              <span className="tag dark">today</span>
+            </div>
+            <p className="small-muted mb-4">
+              Your current macros distribution (KБЖВ)
+            </p>
+            <ReactApexChart
+              options={{
+                chart: { type: "donut", toolbar: { show: false } },
+                labels: ["Protein", "Fats", "Carbs"],
+                colors: ["#00FFC6", "#8B5CF6", "#FF4D9D"],
+                legend: {
+                  position: "bottom",
+                  labels: { colors: "#94a3b8" },
+                },
+                dataLabels: {
+                  enabled: true,
+                  formatter: (val) => `${Math.round(val)}%`,
+                },
+                plotOptions: {
+                  pie: {
+                    donut: {
+                      size: "70%",
+                      labels: {
+                        show: true,
+                        total: {
+                          show: true,
+                          label: "Total kcal",
+                          color: "#cbd5e1",
+                          formatter: () => "1420",
+                        },
+                      },
+                    },
+                  },
+                },
+                tooltip: {
+                  y: { formatter: (val) => `${val}%` },
+                  theme: "dark",
+                },
+                stroke: { width: 0 },
+              }}
+              series={[macros.protein, macros.fats, macros.carbs]}
+              type="donut"
+              height={220}
+            />
           </div>
 
           {/* Workouts plan */}
